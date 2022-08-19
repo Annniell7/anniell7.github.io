@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Annie's Blog</title>
+<link rel="stylesheet" href="estilos.css">
+<style>
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+    margin:0;
+    padding:0;
+}
+
+header {
+    background:#333;
+    color:#eee;
+    width:100%;
+}
+
+input#abrir-cerrar {
+    visibility:hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+
+label[for="abrir-cerrar"] {
+    cursor:pointer;
+    padding: 1rem;
+    background-color:black;
+    color:#fff;
+    display:inline-block;
+    width:100%;
+
+}
+
+.cerrar {
+    display:none;
+}
+
+#sidebar {
+    width:0;
+}
+
+#contenido {
+    margin-left:0;
+}
+
+input#abrir-cerrar:checked ~ #sidebar {
+    width:300px;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+    margin-left:300px;
+    transition: margin-left .4s;
+}
+
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+    display:inline;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+    display:none;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.sidebar .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.sidebar ul, .sidebar li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+.sidebar ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 120%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+.sidebar a:hover{
+    color:#fff;
+    background-color: #4062BB;
+
+}
+
+h1 {
+    color: #1C1C1C;
+    font-size:180%;
+    font-weight:normal;
+}
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size:1rem;   
+}
+body{background-image: url(); background-position: 50% 90px; 
+    background-repeat: no-repeat; background-attachment: fixed; background-color: #fff}
+</style>
+
+
+</head>
+<body>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span></label>
+    <div id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="https://www.google.com/search?q=Reparto+de+Me+llaman+Radio&ei=7fT-YomEE9eBkvQPs_yO0A0&ved=0ahUKEwjJrqim7dH5AhXXgIQIHTO-A9oQ4dUDCA4&uact=5&oq=Reparto+de+Me+llaman+Radio&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEOgcIABBHELADOgQIABANSgQIQRgASgQIRhgAULwFWN9KYKZNaAJwAXgAgAGVAYgB7AeSAQMxLjiYAQCgAQHIAQjAAQE&sclient=gws-wiz">Reparto</a></li>
+        </ul>
+    </div>
+    <div id="contenido">
+        <center><p><h1><b>Me llaman Radio</b></h1></p></center>
+        <center><img src="radio.jpg" width="880" height="400" alt="Radio"></center>
+    </div>
+    <main>
+    <article>
+        <p><h2><b>Resumen</b></h2></p>
+        <p class="texto-justificado">Me llaman Radio recrea una historia real de la década de 1970 publicada por Sports Ilustrated. Harold Jones es el prestigioso entrenador en jefe del equipo de fútbol de la escuela secundaria en Anderson, una tranquila ciudad de Carolina del Sur. Aunque respeta su integridad y razonamiento, Harold pasa mucho tiempo en el equipo y descuida el cuidado de su esposa y su hija adolescente. La situación se complica cuando Harold decide ayudar a James Robert Kennedy, un joven negro con discapacidad intelectual, a deshacerse de su tranquila soledad y convertirse en su asistente y en un ícono para el equipo. Su iniciativa destacó el racismo y el clasismo que se encuentran en ciertas áreas de la ciudad.</p>
+        <p class="texto-justificado">radio comenzó a ayudar al entrenador durante los partidos de fútbol, ​​pero esto no fue bien recibido, ya que el padre de uno de los jugadores intentó oponerse a su ayuda, afirmando que era una distracción. Sin embargo, él lo ignora y continúa llevándola, incluso a clase.</p>
+        <p class="texto-justificado">La película termina con el retiro del entrenador Harold Jones, quien toma la decisión de pasar más tiempo con su familia. Sin embargo, decidió seguir siendo docente y permanecer cuidando de “Radio”, ya que fue visto con gran entusiasmo durante su graduación, luego de unos años Radio se convirtió en entrenador escuela.</p>
+        <img src="https://pics.filmaffinity.com/radio-631588727-large.jpg" width="310" height="220" alt="Radio">
+        <p><h2><em><b>Mi punto de vista</b></em></h2></p>
+        <p>La pelicula es execelente para la concientización de la igualdad, ya sea por el color, por el género, o por los tipos de síndromes que tenga, en muchas ocaciones, se promueve el bulliying y el rasismo. Normalmente los que hacen o promueven el bulliying y el racismo son personas que han sufrido en algun momento de sus vidas y se desquitan con personas que no tienen la culpa por haber sufrido. </p>
+        <p>Esta pelicula es muy motivadora y sentimental, debido a que se basa en hechos reales, el mensaje es que algunas personas no son comprendidas por la sociedad o, peor aún, son ignoradas en gran medida mientras son discriminadas sin darles una oportunidad. Esta comprensión de su existencia es lo que hace juicios normales sobre las personas sin su conocimiento.</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p><em>Algún comentario a consulta me lo pueden hacer llegar a mi correo angieliuliang@gmail.com</em></p>
+        <p>
+    <!-- begin wwww.htmlcommentbox.com -->
+    <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+    <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+    <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24SK%2FOAHlvFTMVK66gBskRf."+"&opts=16798&num=10&ts=1660017163237");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+    <!-- end www.htmlcommentbox.com -->
+    </p>
+    </article>
+    </main>
+    <footer class="PP">
+    </div>
+    <div class="grupo-1">
+        <b>Angie Blog</b><small>&copy;2022 <em>Todos los derechos están reservados</em></small>
+    </div>
+    </footer>
+    </p>
+</body>
+</html> 
